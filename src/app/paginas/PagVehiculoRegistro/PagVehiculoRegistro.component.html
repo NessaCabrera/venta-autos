@@ -1,0 +1,54 @@
+
+<div class="card">
+  <div class="card-header">
+    CREACION DE VEHICULO
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-12">
+     
+        <form [formGroup]="formulario">
+          <div class ="row">
+            <div class="col-12">
+             <div class="mb-3">
+              <label class="form-label">Codigo:</label>
+              <input type="text" class="form-control"  formControlName="codigo" > 
+              <span class="text-danger" *ngIf="formulario.controls['codigo'].errors?.reqierd">Valor Requerido</span><br>
+              <span class="text-danger" *ngIf="formulario.controls['codigo'].errors?.codigoValidate">Solo acepta digitos</span>
+              </div>
+        
+              <div class="mb-3">
+                <label class="form-label">Marca</label>
+                <input type="text" class="form-control" formControlName="marca">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Modelo</label>
+                <input type="text" class="form-control" formControlName="modelo">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">anio</label>
+                <input type="text" class="form-control" formControlName="anio" >
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Kilometraje</label>
+                <input type="text" class="form-control" formControlName="kilometraje">        
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Precio</label>
+                <input type="text" class="form-control" formControlName="precio">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">calificacion</label>
+                <input type="text" class="form-control" formControlName="calificacion">
+              </div>
+            </div>
+          </div>
+        </form>
+    
+      <div class="row">
+        <div class="col-3">
+          <button class="btn btn-info" (click)="guardar()">GUARDAR</button>
+        </div>  
+      </div>
+</div>

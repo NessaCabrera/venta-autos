@@ -1,0 +1,63 @@
+<div class="card">
+  <div class="card-header">
+VEHICULO{{vehiculo?.marca}}{{vehiculo?.modelo}} 
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-5">
+        <img src="{{vehiculo?.foto}}" class="img-thumbnail">
+      </div>
+      <div class="col-1">
+
+      </div>
+      <div class="col-6">
+        <div class="mb-3 row">
+          <label for="staticCodigo" class="col-sn-2 col-form-label">Codigo</label>
+          <div class="col-sn-10">
+            {{vehiculo?.codigo}}
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="staticCodigo" class="col-sn-2 col-form-label">Marca</label>
+          <div class="col-sn-10">
+            {{vehiculo?.marca}}
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="staticCodigo" class="col-sn-2 col-form-label">Modelo</label>
+          <div class="col-sn-10">
+            {{vehiculo?.modelo}}
+          </div>
+        </div>
+        
+        <div class="mb-3 row">
+          <label for="staticCodigo" class="col-sn-2 col-form-label">Color</label>
+          <div class="col-sn-10">
+            {{vehiculo?.color}}
+          </div>
+        </div>
+        
+        <div class="mb-3 row">
+          <label for="staticCodigo" class="col-sn-2 col-form-label">anio</label>
+          <div class="col-sn-10">
+            {{vehiculo?.anio}}
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="staticCodigo" class="col-sn-2 col-form-label">Kilometraje</label>
+          <div class="col-sn-10">
+            {{vehiculo?.kilometraje}}
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="staticCodigo" class="col-sn-2 col-form-label">calificacion</label>
+          <div class="col-sn-10">
+            <app-calificacion [calificacion]="vehiculo?.calificacion"(accion)="imprimir($event)"></app-calificacion>
+          </div> 
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
